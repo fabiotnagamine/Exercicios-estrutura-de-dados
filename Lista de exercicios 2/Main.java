@@ -1,27 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package DuplamenteEncadeada;
 
-package estrutura.de.dados.exercicios;
-
-
+/**
+ *
+ * @author fabio
+ */
 public class Main {
-
-	public static void main(String[] args) {
-		ListaEncadeada listaAtletas = new ListaEncadeada();
-		Atleta a1 = new Atleta("X", 1.88, 98.8,"Futebol","Lg");
-		Atleta a2 = new Atleta("XX", 1.88, 79.6,"Volei","Lg");
-		Atleta a3 = new Atleta("XA", 1.88, 45.9,"Golfe","Lg");
-		Atleta a4 = new Atleta("XYZ", 1.88, 63.5,"Skate ","Lg");
-		Atleta a5 = new Atleta("XY", 1.88, 54.5,"Hipismo","Lg");
-		listaAtletas.insereFim(new No(a1));
-		listaAtletas.insereFim(new No(a2));
-		listaAtletas.insereFim(new No(a3));
-		listaAtletas.insereFim(new No(a4));
-		listaAtletas.insereFim(new No(a5));
-		
-		listaAtletas.imprimeLista();
-                
-                listaAtletas.remove("XYZ");
-                listaAtletas.imprimeLista();
-                listaAtletas.buscar("XY");
-	}
-
+    public static void main(String[] args) {
+        ListaDuplamenteEncadeada listaNome = new ListaDuplamenteEncadeada();
+        Aluno a1 = new Aluno("Tucano", "Botânica", 2002, 9.4);
+        Aluno a2 = new Aluno("Fulano", "Matemática ", 2003, 9.0);
+        Aluno a3 = new Aluno("Ciclano", "Sociologia", 2004, 7.4);
+        Aluno a4 = new Aluno("Tucano", "Filosofia", 2005, 4.1);
+        listaNome.insereFim(new No(a1));
+        listaNome.insereFim(new No(a2));
+        listaNome.insereFim(new No(a3));
+        listaNome.insereFim(new No(a4));
+        
+        
+        listaNome.imprimeLista();
+        
+        listaNome.remove("Tucano");
+        listaNome.remove("Ciclano");
+        
+        listaNome.imprimeLista();
+    }
 }
+ 

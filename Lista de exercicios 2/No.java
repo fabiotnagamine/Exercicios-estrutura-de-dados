@@ -1,35 +1,40 @@
-
-package estrutura.de.dados.exercicios;
-
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package DuplamenteEncadeada;
 public class No {
-	Object objeto;
-	No proximo;
 
-	public No(Object objeto) {
-		this.objeto = objeto;
-	}
 
-	public Object getObjeto() {
-		return objeto;
-	}
+    Object obj;
+    No proximo;
+    No anterior;
 
-	public void setObjeto(Object objeto) {
-		this.objeto = objeto;
-	}
-
-	public No getProximo() {
-		return proximo;
-	}
-
-	public void setProximo(No proximo) {
-		this.proximo = proximo;
-	}
-
-    @Override
-    public String toString() {
-        return objeto.toString();
+    public No(Object o){
+        obj = o;
     }
-	
-	
+
+    public Object getObj(){
+        return obj;
+    }
+
+    public String toString(){
+        return obj.toString();
+    }
+
+    public void setProximo(No n){
+        proximo = n;
+    }
+    public No getProximo(){
+        return proximo;
+    }
+
+    public void setAnterior(No n){
+        anterior = n;
+    }
+    public No getAnterior(){
+        return anterior;
+    }
+
 }
